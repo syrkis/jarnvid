@@ -1,6 +1,6 @@
 [project]
 name = "jarnvid"
-version = "0.2.0"
+version = "0.2.1"
 description = "Complex structures as frozen JAX dataclasses, made algebraic: write for one instance, vectorize over any batch."
 readme = "README.md"
 license = "MIT"
@@ -34,7 +34,7 @@ dev = [
 ]
 
 [build-system]
-requires = ["uv_build>=0.12.2,<0.13.0"]
+requires = ["uv_build>=0.13,<0.14"]
 build-backend = "uv_build"
 
 [tool.ruff]
