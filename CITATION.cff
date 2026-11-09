@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use jarnvid in your research, please cite it as below."
+title: "jarnvid: vectorize JAX functions over batches of structures from their jaxtyping annotations"
+type: software
+authors:
+  - family-names: Syrkis
+    given-names: Noah
+    affiliation: IT University of Copenhagen
+license: MIT
+repository-code: "https://github.com/syrkis/jarnvid"
+keywords: [jax, vmap, jaxtyping, pytree, batching]

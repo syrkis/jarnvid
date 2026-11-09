@@ -1,0 +1,46 @@
+[project]
+name = "jarnvid"
+version = "0.2.0"
+description = "Complex structures as frozen JAX dataclasses, made algebraic: write for one instance, vectorize over any batch."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Noah Syrkis", email = "noah@syrkis.com" }]
+requires-python = ">=3.13"
+keywords = ["jax", "vmap", "vectorize", "jaxtyping", "pytree", "dataclass", "batching"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+dependencies = [
+    "jax>=0.9.0",
+    "jaxtyping>=0.3.9",
+]
+
+[project.urls]
+Repository = "https://github.com/syrkis/jarnvid"
+Decisions = "https://github.com/syrkis/jarnvid/tree/main/docs/adr"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-xdist",
+    "hypothesis",
+    "ruff>=0.17.4",
+    "vulture>=2.16",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 128
+
+[tool.pytest.ini_options]
+# The README's examples run as doctests, so it cannot fall behind the code.
+testpaths = ["tests", "README.md"]
+addopts = "-n auto --doctest-glob=README.md"
